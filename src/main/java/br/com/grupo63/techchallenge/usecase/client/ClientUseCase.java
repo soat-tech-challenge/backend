@@ -18,7 +18,7 @@ public class ClientUseCase implements IClientUseCase {
     @Override
     public Client identify(Client client) {
         Optional<Client> optionalClient = gateway.findByNationalId(client.getNationalId());
-        
+        System.out.print("asrfasfs");
         if (optionalClient.isPresent()) {
             return optionalClient.get();
         }
